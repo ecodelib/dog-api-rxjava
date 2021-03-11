@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">DogAPIRxJavaExample</string>
+    <string name="get_dog_shot">Get dog shot</string>
+</resources>
