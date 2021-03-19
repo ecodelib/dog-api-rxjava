@@ -52,10 +52,8 @@ class MessageFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         imageView  = view.findViewById(R.id.imageView)
         buttonAnswer = view.findViewById(R.id.getButton)
-       // visibleQuestion()
 
         buttonAnswer.setOnClickListener{
-         //   visibleLoading()
             messageViewModel.loadMessage()
         }
 
@@ -70,7 +68,6 @@ class MessageFragment : Fragment() {
                         loadFromURL(result.value.imageUrl, requireContext(), imageView)
                     }
                     is Result.Failure -> {
-                       // loadFromLocal
                         loadFromLocal(R.drawable.n02085936_6671,requireContext(),imageView);
                     }
                 }
@@ -88,7 +85,6 @@ class MessageFragment : Fragment() {
                     target: Target<Drawable>?,
                     isFirstResource: Boolean
                 ): Boolean {
-
                     loadFromLocal(R.drawable.n02085936_6671,requireContext(),imageView);
                     return false
                 }
@@ -100,7 +96,6 @@ class MessageFragment : Fragment() {
                     dataSource: DataSource?,
                     isFirstResource: Boolean
                 ): Boolean {
-                 //
                     return false
                 }
             })
@@ -122,6 +117,4 @@ class MessageFragment : Fragment() {
                 }).into(imageview)
 
     }
-   // private fun loadFromUrlOrPlaceHolder() http://bumptech.github.io/glide/doc/placeholders.html
-
 }
